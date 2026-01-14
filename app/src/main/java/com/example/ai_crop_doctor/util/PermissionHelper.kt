@@ -104,4 +104,20 @@ object PermissionHelper {
             LOCATION_COARSE
         )
     }
+
+    /**
+     * Get all required permissions for diagnosis feature (alias for getDiagnosisPermissions)
+     */
+    fun getDiagnosisFeaturePermissions(): Array<String> {
+        return getDiagnosisPermissions()
+    }
+
+    /**
+     * Check if all given permissions are granted
+     */
+    fun arePermissionsGranted(context: Context, permissions: Array<String>): Boolean {
+        return permissions.all {
+            ContextCompat.checkSelfPermission(context, it) == PackageManager.PERMISSION_GRANTED
+        }
+    }
 }

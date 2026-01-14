@@ -172,7 +172,7 @@ class MapFragment : Fragment(), OnMapReadyCallback {
 
         binding.apply {
             tvAlertTitle.text = alert.getMarkerTitle()
-            tvAlertArea.text = alert.affectedArea + ", " + alert.province
+            tvAlertArea.text = alert.affectedArea
             tvAlertCases.text = "${alert.caseCount} ca nhiễm"
             tvAlertDescription.text = alert.description
             bottomSheet.visibility = View.VISIBLE

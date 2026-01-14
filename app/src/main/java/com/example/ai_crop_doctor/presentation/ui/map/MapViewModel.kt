@@ -122,85 +122,85 @@ class MapViewModel @Inject constructor(
                 diseaseType = "Bệnh đạo ôn",
                 severity = "high",
                 affectedArea = "Châu Đốc",
-                province = "An Giang",
-                district = "Châu Đốc",
+                
+                
                 latitude = 10.7051,
                 longitude = 105.1180,
                 radius = 15.0,
                 caseCount = 45,
                 description = "Dịch bệnh đạo ôn đang lan rộng trong khu vực trồng lúa. Cần áp dụng biện pháp phòng ngừa ngay.",
-                recommendations = "Phun thuốc diệt khuẩn, tăng cường thoát nước, loại bỏ cây nhiễm bệnh.",
-                reportedAt = Date(now.time - 86400000), // 1 day ago
-                updatedAt = now,
-                isActive = true
+                
+                reportedDate = Date(now.time - 86400000), // 1 day ago
+                lastUpdated = now,
+                
             ),
             EpidemicAlert(
                 id = 2,
                 diseaseType = "Bệnh bạc lá",
                 severity = "medium",
                 affectedArea = "Tam Nông",
-                province = "Đồng Tháp",
-                district = "Tam Nông",
+                
+                
                 latitude = 10.6481,
                 longitude = 105.5972,
                 radius = 10.0,
                 caseCount = 28,
                 description = "Phát hiện bệnh bạc lá trên cây lúa trong khu vực.",
-                recommendations = "Sử dụng giống chống chịu, áp dụng phân bón cân đối.",
-                reportedAt = Date(now.time - 172800000), // 2 days ago
-                updatedAt = now,
-                isActive = true
+                
+                reportedDate = Date(now.time - 172800000), // 2 days ago
+                lastUpdated = now,
+                
             ),
             EpidemicAlert(
                 id = 3,
                 diseaseType = "Bệnh khô vằn",
                 severity = "low",
                 affectedArea = "Châu Thành",
-                province = "An Giang",
-                district = "Châu Thành",
+                
+                
                 latitude = 10.6703,
                 longitude = 105.1540,
                 radius = 8.0,
                 caseCount = 12,
                 description = "Một số hộ dân báo cáo bệnh khô vằn xuất hiện.",
-                recommendations = "Theo dõi và xử lý cục bộ, tăng cường dinh dưỡng cho cây.",
-                reportedAt = Date(now.time - 259200000), // 3 days ago
-                updatedAt = now,
-                isActive = true
+                
+                reportedDate = Date(now.time - 259200000), // 3 days ago
+                lastUpdated = now,
+                
             ),
             EpidemicAlert(
                 id = 4,
                 diseaseType = "Sâu cuốn lá",
                 severity = "high",
                 affectedArea = "Cao Lãnh",
-                province = "Đồng Tháp",
-                district = "Cao Lãnh",
+                
+                
                 latitude = 10.4596,
                 longitude = 105.6327,
                 radius = 12.0,
                 caseCount = 67,
                 description = "Sâu cuốn lá bùng phát mạnh, gây thiệt hại lớn cho cây lúa.",
-                recommendations = "Phun thuốc trừ sâu, thu gom và tiêu hủy sâu bệnh.",
-                reportedAt = Date(now.time - 43200000), // 12 hours ago
-                updatedAt = now,
-                isActive = true
+                
+                reportedDate = Date(now.time - 43200000), // 12 hours ago
+                lastUpdated = now,
+                
             ),
             EpidemicAlert(
                 id = 5,
                 diseaseType = "Bệnh đốm lá vi khuẩn",
                 severity = "medium",
                 affectedArea = "Long Xuyên",
-                province = "An Giang",
-                district = "Long Xuyên",
+                
+                
                 latitude = 10.3833,
                 longitude = 105.4358,
                 radius = 10.0,
                 caseCount = 31,
                 description = "Bệnh đốm lá vi khuẩn xuất hiện trên diện rộng.",
-                recommendations = "Cải thiện thoát nước, phun thuốc diệt khuẩn định kỳ.",
-                reportedAt = Date(now.time - 345600000), // 4 days ago
-                updatedAt = now,
-                isActive = true
+                
+                reportedDate = Date(now.time - 345600000), // 4 days ago
+                lastUpdated = now,
+                
             )
         )
     }

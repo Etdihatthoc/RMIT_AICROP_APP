@@ -129,7 +129,7 @@ class DiagnosisResultViewModel @Inject constructor(
             _errorMessage.value = null
 
             try {
-                val result = diagnosisRepository.getDiagnosis(diagnosisId)
+                val result = diagnosisRepository.getDiagnosisById(diagnosisId)
 
                 when (result) {
                     is Resource.Success -> {

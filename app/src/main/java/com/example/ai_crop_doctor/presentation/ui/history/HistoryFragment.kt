@@ -49,7 +49,7 @@ class HistoryFragment : Fragment() {
                 putInt("diagnosis_id", diagnosis.id)
             }
             findNavController().navigate(
-                R.id.action_history_to_diagnosisDetail,
+                R.id.action_history_to_detail,
                 bundle
             )
         }
