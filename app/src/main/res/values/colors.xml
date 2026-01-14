@@ -47,4 +47,12 @@
     <!-- Border Colors -->
     <color name="border_light">#E0E0E0</color>
     <color name="border_medium">#BDBDBD</color>
+
+    <!-- Additional Colors for Drawables and Layouts -->
+    <color name="divider">#E0E0E0</color>
+    <color name="accent_blue">#2196F3</color>
+    <color name="background">#FFFFFF</color>
+    <color name="warning">#FF9800</color>
+    <color name="warning_light">#FFF3E0</color>
+    <color name="text_hint">#9E9E9E</color>
 </resources>

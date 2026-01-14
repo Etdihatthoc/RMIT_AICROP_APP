@@ -27,6 +27,12 @@
     <string name="view_epidemic_map">Bản đồ dịch bệnh</string>
     <string name="view_history">Lịch sử chẩn đoán</string>
     <string name="consult_expert">Tư vấn chuyên gia</string>
+    <string name="home_welcome">Xin chào, Nông dân!</string>
+    <string name="home_description">Chẩn đoán bệnh cây trồng bằng trí tuệ nhân tạo</string>
+    <string name="home_btn_camera">Chụp ảnh chẩn đoán</string>
+    <string name="home_btn_map">Xem bản đồ dịch bệnh</string>
+    <string name="home_btn_history">Lịch sử chẩn đoán</string>
+    <string name="home_recent_diagnoses">Chẩn đoán gần đây</string>
 
     <!-- Camera Screen -->
     <string name="camera_title">Chụp ảnh cây trồng</string>
