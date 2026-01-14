@@ -1,6 +1,7 @@
 package com.example.ai_crop_doctor.di
 
 import com.example.ai_crop_doctor.BuildConfig
+import com.example.ai_crop_doctor.data.remote.api.DiagnosisApiService
 import com.example.ai_crop_doctor.util.Constants
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -90,13 +91,12 @@ object NetworkModule {
 
     /**
      * Provides DiagnosisApiService for diagnosis endpoints
-     * Will be created in Phase 2
      */
-    // @Provides
-    // @Singleton
-    // fun provideDiagnosisApiService(retrofit: Retrofit): DiagnosisApiService {
-    //     return retrofit.create(DiagnosisApiService::class.java)
-    // }
+    @Provides
+    @Singleton
+    fun provideDiagnosisApiService(retrofit: Retrofit): DiagnosisApiService {
+        return retrofit.create(DiagnosisApiService::class.java)
+    }
 
     /**
      * Provides EpidemicApiService for epidemic alert endpoints

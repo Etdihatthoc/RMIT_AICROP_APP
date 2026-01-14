@@ -10,6 +10,7 @@ import androidx.fragment.app.viewModels
 import com.example.ai_crop_doctor.R
 import com.example.ai_crop_doctor.databinding.FragmentMapBinding
 import com.example.ai_crop_doctor.domain.model.EpidemicAlert
+import com.example.ai_crop_doctor.util.LocationData
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback

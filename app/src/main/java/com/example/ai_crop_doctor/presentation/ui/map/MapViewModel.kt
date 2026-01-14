@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.ai_crop_doctor.domain.model.EpidemicAlert
+import com.example.ai_crop_doctor.util.LocationData
 import com.example.ai_crop_doctor.util.LocationHelper
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -28,8 +29,8 @@ class MapViewModel @Inject constructor(
     private val _errorMessage = MutableLiveData<String?>()
     val errorMessage: LiveData<String?> = _errorMessage
 
-    private val _currentLocation = MutableLiveData<LocationHelper.LocationData?>()
-    val currentLocation: LiveData<LocationHelper.LocationData?> = _currentLocation
+    private val _currentLocation = MutableLiveData<LocationData?>()
+    val currentLocation: LiveData<LocationData?> = _currentLocation
 
     init {
         loadEpidemicAlerts()

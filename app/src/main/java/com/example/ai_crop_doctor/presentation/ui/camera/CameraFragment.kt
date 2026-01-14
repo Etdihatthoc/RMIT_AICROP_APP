@@ -127,12 +127,12 @@ class CameraFragment : Fragment() {
     }
 
     private fun allPermissionsGranted(): Boolean {
-        val requiredPermissions = PermissionHelper.getDiagnosisFeaturePermissions(includeAudio = false)
+        val requiredPermissions = PermissionHelper.getDiagnosisFeaturePermissions()
         return PermissionHelper.arePermissionsGranted(requireContext(), requiredPermissions)
     }
 
     private fun requestPermissions() {
-        val requiredPermissions = PermissionHelper.getDiagnosisFeaturePermissions(includeAudio = false)
+        val requiredPermissions = PermissionHelper.getDiagnosisFeaturePermissions()
         requestPermissionLauncher.launch(requiredPermissions)
     }
 

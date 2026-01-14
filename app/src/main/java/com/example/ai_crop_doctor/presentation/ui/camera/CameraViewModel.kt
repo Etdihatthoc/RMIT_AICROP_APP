@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.ai_crop_doctor.domain.model.Diagnosis
 import com.example.ai_crop_doctor.domain.repository.DiagnosisRepository
-import com.example.ai_crop_doctor.util.LocationHelper
+import com.example.ai_crop_doctor.util.LocationData
 import com.example.ai_crop_doctor.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -31,7 +31,7 @@ class CameraViewModel @Inject constructor(
     private val _diagnosisResult = MutableLiveData<Diagnosis?>()
     val diagnosisResult: LiveData<Diagnosis?> = _diagnosisResult
 
-    private var currentLocationData: LocationHelper.LocationData? = null
+    private var currentLocationData: LocationData? = null
 
     /**
      * Called when user captures or selects an image
@@ -44,7 +44,7 @@ class CameraViewModel @Inject constructor(
     /**
      * Set location data for diagnosis
      */
-    fun setLocationData(locationData: LocationHelper.LocationData?) {
+    fun setLocationData(locationData: LocationData?) {
         currentLocationData = locationData
         Timber.d("Location data set: ${locationData?.province}, ${locationData?.district}")
     }
