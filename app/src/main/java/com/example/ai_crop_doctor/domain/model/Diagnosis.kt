@@ -30,12 +30,14 @@ data class Diagnosis(
     val confidence: Double,
     val severity: String?,
     val fullResponse: String,
+    val treatmentSuggestions: String?,
+    val preventionTips: String?,
+    val symptoms: String?,
+    val causes: String?,
 
     // Expert Review
-    val status: String = "pending", // pending, confirmed, corrected, rejected
     val expertReviewed: Boolean = false,
     val expertComment: String?,
-    val expertId: String?,
 
     // Timestamps
     val createdAt: Date,
@@ -75,10 +77,56 @@ data class Diagnosis(
      * Get location display string
      */
     fun getLocationDisplay(): String {
-        return when {
-            province != null && district != null -> "$district, $province"
-            province != null -> province
-            else -> "Không có vị trí"
+        val parts = mutableListOf<String>()
+        district?.let { parts.add(it) }
+        province?.let { parts.add(it) }
+        return if (parts.isNotEmpty()) {
+            parts.joinToString(", ")
+        } else {
+            "Không xác định"
         }
+    }
+
+    /**
+     * Returns formatted confidence percentage
+     */
+    fun getConfidencePercentage(): String {
+        return "${(confidence * 100).toInt()}%"
+    }
+
+    /**
+     * Returns confidence badge color based on confidence level
+     */
+    fun getConfidenceBadgeColor(): String {
+        return when {
+            confidence >= 0.80 -> "#4CAF50" // Green
+            confidence >= 0.50 -> "#FF9800" // Orange
+            else -> "#F44336" // Red
+        }
+    }
+
+    /**
+     * Checks if diagnosis has location data
+     */
+    fun hasLocation(): Boolean {
+        return latitude != null && longitude != null
+    }
+
+    /**
+     * Checks if diagnosis has weather data
+     */
+    fun hasWeatherData(): Boolean {
+        return temperature != null || humidity != null || weatherConditions != null
+    }
+
+    /**
+     * Returns formatted weather information
+     */
+    fun getWeatherDisplay(): String {
+        val parts = mutableListOf<String>()
+        temperature?.let { parts.add("${it.toInt()}°C") }
+        humidity?.let { parts.add("${it.toInt()}% độ ẩm") }
+        weatherConditions?.let { parts.add(it) }
+        return parts.joinToString(" • ")
     }
 }

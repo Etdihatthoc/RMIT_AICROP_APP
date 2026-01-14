@@ -5,92 +5,92 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/homeFragment">
 
-    <!-- Home Fragment - Landing page -->
+    <!-- Home Fragment -->
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.ai_crop_doctor.presentation.ui.home.HomeFragment"
         android:label="@string/nav_home"
         tools:layout="@layout/fragment_home">
 
-        <!-- Navigate to Camera (will be added in Phase 2) -->
-        <!-- <action
+        <action
             android:id="@+id/action_home_to_camera"
-            app:destination="@id/cameraFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" /> -->
+            app:destination="@id/cameraFragment" />
 
-        <!-- Navigate to Map (will be added in Phase 4) -->
-        <!-- <action
+        <action
             android:id="@+id/action_home_to_map"
-            app:destination="@id/mapFragment" /> -->
+            app:destination="@id/mapFragment" />
 
-        <!-- Navigate to History (will be added in Phase 3) -->
-        <!-- <action
+        <action
             android:id="@+id/action_home_to_history"
-            app:destination="@id/historyFragment" /> -->
+            app:destination="@id/historyFragment" />
     </fragment>
 
-    <!-- History Fragment - Will be added in Phase 3 -->
+    <!-- Camera Fragment -->
     <fragment
-        android:id="@+id/historyFragment"
-        android:name="com.example.ai_crop_doctor.presentation.ui.home.HomeFragment"
-        android:label="@string/nav_history"
-        tools:layout="@layout/fragment_home">
-        <!-- Temporary: Using HomeFragment as placeholder -->
-        <!-- Will be replaced with actual HistoryFragment in Phase 3 -->
-    </fragment>
-
-    <!-- Map Fragment - Will be added in Phase 4 -->
-    <fragment
-        android:id="@+id/mapFragment"
-        android:name="com.example.ai_crop_doctor.presentation.ui.home.HomeFragment"
-        android:label="@string/nav_map"
-        tools:layout="@layout/fragment_home">
-        <!-- Temporary: Using HomeFragment as placeholder -->
-        <!-- Will be replaced with actual MapFragment in Phase 4 -->
-    </fragment>
-
-    <!-- Camera Fragment - Will be added in Phase 2 -->
-    <!-- <fragment
         android:id="@+id/cameraFragment"
-        android:name="com.example.ai_crop_doctor.presentation.ui.diagnosis.camera.CameraFragment"
-        android:label="@string/camera_title"
+        android:name="com.example.ai_crop_doctor.presentation.ui.camera.CameraFragment"
+        android:label="Chụp ảnh"
         tools:layout="@layout/fragment_camera">
 
         <action
             android:id="@+id/action_camera_to_result"
             app:destination="@id/diagnosisResultFragment"
             app:popUpTo="@id/homeFragment" />
-    </fragment> -->
+    </fragment>
 
-    <!-- Diagnosis Result Fragment - Will be added in Phase 2 -->
-    <!-- <fragment
+    <!-- Diagnosis Result Fragment -->
+    <fragment
         android:id="@+id/diagnosisResultFragment"
-        android:name="com.example.ai_crop_doctor.presentation.ui.diagnosis.result.DiagnosisResultFragment"
-        android:label="@string/result_title"
+        android:name="com.example.ai_crop_doctor.presentation.ui.diagnosis.DiagnosisResultFragment"
+        android:label="Kết quả chẩn đoán"
         tools:layout="@layout/fragment_diagnosis_result">
 
         <argument
             android:name="diagnosisId"
-            app:argType="integer" />
+            app:argType="integer"
+            android:defaultValue="-1" />
 
         <action
             android:id="@+id/action_result_to_expert_chat"
             app:destination="@id/expertChatFragment" />
-    </fragment> -->
 
-    <!-- Expert Chat Fragment - Will be added in Phase 5 -->
-    <!-- <fragment
+        <action
+            android:id="@+id/action_diagnosisResult_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <!-- History Fragment -->
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.ai_crop_doctor.presentation.ui.history.HistoryFragment"
+        android:label="@string/nav_history"
+        tools:layout="@layout/fragment_history">
+
+        <action
+            android:id="@+id/action_history_to_detail"
+            app:destination="@id/diagnosisResultFragment" />
+    </fragment>
+
+    <!-- Map Fragment -->
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.ai_crop_doctor.presentation.ui.map.MapFragment"
+        android:label="@string/nav_map"
+        tools:layout="@layout/fragment_map" />
+
+    <!-- Expert Chat Fragment -->
+    <fragment
         android:id="@+id/expertChatFragment"
         android:name="com.example.ai_crop_doctor.presentation.ui.expert.ExpertChatFragment"
-        android:label="@string/expert_title"
+        android:label="Hỏi chuyên gia"
         tools:layout="@layout/fragment_expert_chat">
 
         <argument
             android:name="diagnosisId"
-            app:argType="integer" />
-    </fragment> -->
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
 
 </navigation>

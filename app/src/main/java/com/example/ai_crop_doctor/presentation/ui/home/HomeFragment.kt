@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.example.ai_crop_doctor.R
 import com.example.ai_crop_doctor.databinding.FragmentHomeBinding
-import com.example.ai_crop_doctor.util.showToast
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 
@@ -52,25 +52,19 @@ class HomeFragment : Fragment() {
         // Camera FAB - Navigate to camera screen
         binding.fabCamera.setOnClickListener {
             viewModel.onCameraClicked()
-            // TODO: Navigate to CameraFragment when implemented in Phase 2
-            // findNavController().navigate(R.id.action_home_to_camera)
-            showToast("Chức năng chụp ảnh sẽ được thêm trong Phase 2")
+            findNavController().navigate(R.id.action_home_to_camera)
         }
 
         // Map card - Navigate to epidemic map
         binding.cardMap.setOnClickListener {
             viewModel.onMapClicked()
-            // TODO: Navigate to MapFragment when implemented in Phase 4
-            // findNavController().navigate(R.id.action_home_to_map)
-            showToast("Bản đồ dịch bệnh sẽ được thêm trong Phase 4")
+            findNavController().navigate(R.id.action_home_to_map)
         }
 
         // History card - Navigate to history screen
         binding.cardHistory.setOnClickListener {
             viewModel.onHistoryClicked()
-            // TODO: Navigate to HistoryFragment when implemented in Phase 3
-            // findNavController().navigate(R.id.action_home_to_history)
-            showToast("Lịch sử chẩn đoán sẽ được thêm trong Phase 3")
+            findNavController().navigate(R.id.action_home_to_history)
         }
     }
 

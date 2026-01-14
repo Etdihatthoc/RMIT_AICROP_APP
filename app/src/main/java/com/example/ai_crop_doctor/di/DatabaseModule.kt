@@ -19,37 +19,26 @@ object DatabaseModule {
 
     /**
      * Provides Room Database instance
-     * Will be implemented in Phase 3 with Room database setup
      */
-    // @Provides
-    // @Singleton
-    // fun provideAppDatabase(@ApplicationContext context: Context): AppDatabase {
-    //     return Room.databaseBuilder(
-    //         context,
-    //         AppDatabase::class.java,
-    //         Constants.DATABASE_NAME
-    //     )
-    //         .fallbackToDestructiveMigration() // For development - remove in production
-    //         .build()
-    // }
+    @Provides
+    @Singleton
+    fun provideAppDatabase(@ApplicationContext context: Context): com.example.ai_crop_doctor.data.local.database.AICropDoctorDatabase {
+        return Room.databaseBuilder(
+            context,
+            com.example.ai_crop_doctor.data.local.database.AICropDoctorDatabase::class.java,
+            Constants.DATABASE_NAME
+        )
+            .fallbackToDestructiveMigration()
+            .build()
+    }
 
     /**
      * Provides DiagnosisDao for diagnosis database operations
-     * Will be implemented in Phase 3
      */
-    // @Provides
-    // @Singleton
-    // fun provideDiagnosisDao(database: AppDatabase): DiagnosisDao {
-    //     return database.diagnosisDao()
-    // }
+    @Provides
+    @Singleton
+    fun provideDiagnosisDao(database: com.example.ai_crop_doctor.data.local.database.AICropDoctorDatabase): com.example.ai_crop_doctor.data.local.dao.DiagnosisDao {
+        return database.diagnosisDao()
+    }
 
-    /**
-     * Provides EpidemicAlertDao for epidemic alert database operations
-     * Will be implemented in Phase 4
-     */
-    // @Provides
-    // @Singleton
-    // fun provideEpidemicAlertDao(database: AppDatabase): EpidemicAlertDao {
-    //     return database.epidemicAlertDao()
-    // }
 }

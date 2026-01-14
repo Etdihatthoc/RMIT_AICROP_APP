@@ -62,18 +62,24 @@ data class DiagnosisResponse(
     @SerializedName("full_response")
     val fullResponse: String,
 
-    // Expert Review
-    @SerializedName("status")
-    val status: String = "pending",
+    @SerializedName("treatment_suggestions")
+    val treatmentSuggestions: String?,
 
+    @SerializedName("prevention_tips")
+    val preventionTips: String?,
+
+    @SerializedName("symptoms")
+    val symptoms: String?,
+
+    @SerializedName("causes")
+    val causes: String?,
+
+    // Expert Review
     @SerializedName("expert_reviewed")
     val expertReviewed: Boolean = false,
 
     @SerializedName("expert_comment")
     val expertComment: String?,
-
-    @SerializedName("expert_id")
-    val expertId: String?,
 
     // Timestamps
     @SerializedName("created_at")
@@ -87,6 +93,7 @@ data class DiagnosisResponse(
      */
     fun toDomainModel(): Diagnosis {
         val dateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.US)
+        dateFormat.timeZone = TimeZone.getTimeZone("UTC")
 
         return Diagnosis(
             id = diagnosisId,
@@ -105,10 +112,12 @@ data class DiagnosisResponse(
             confidence = confidence,
             severity = severity,
             fullResponse = fullResponse,
-            status = status,
+            treatmentSuggestions = treatmentSuggestions,
+            preventionTips = preventionTips,
+            symptoms = symptoms,
+            causes = causes,
             expertReviewed = expertReviewed,
             expertComment = expertComment,
-            expertId = expertId,
             createdAt = try {
                 dateFormat.parse(createdAt) ?: Date()
             } catch (e: Exception) {

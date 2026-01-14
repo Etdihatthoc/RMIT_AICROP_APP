@@ -205,3 +205,49 @@ fun Double.getConfidenceColorRes(): Int {
         else -> android.R.color.holo_red_dark
     }
 }
+
+// ==================== Date Relative Time ====================
+
+/**
+ * Convert Date to relative time string in Vietnamese
+ * Example: "2 giờ trước", "Hôm qua", "5 ngày trước"
+ */
+fun Date.toRelativeTimeString(): String {
+    val now = Date()
+    val diff = now.time - this.time
+    val seconds = diff / 1000
+    val minutes = seconds / 60
+    val hours = minutes / 60
+    val days = hours / 24
+
+    return when {
+        days > 7 -> toVietnameseDate()
+        days > 1 -> "$days ngày trước"
+        days == 1L -> "Hôm qua"
+        hours > 0 -> "$hours giờ trước"
+        minutes > 0 -> "$minutes phút trước"
+        else -> "Vừa xong"
+    }
+}
+
+// ==================== ImageView Extensions ====================
+
+/**
+ * Load image from file using Glide
+ */
+fun android.widget.ImageView.loadImage(file: java.io.File) {
+    com.bumptech.glide.Glide.with(this.context)
+        .load(file)
+        .centerCrop()
+        .into(this)
+}
+
+/**
+ * Load image from URL using Glide
+ */
+fun android.widget.ImageView.loadImage(url: String) {
+    com.bumptech.glide.Glide.with(this.context)
+        .load(url)
+        .centerCrop()
+        .into(this)
+}
