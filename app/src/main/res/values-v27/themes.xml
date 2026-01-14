@@ -1,0 +1,9 @@
+<resources>
+    <!-- Theme for API 27+ with windowLightNavigationBar support -->
+    <style name="Base.Theme.AI_CROP_DOCTOR" parent="Theme.Material3.Light.NoActionBar">
+        <!-- All inherited attributes from base theme -->
+
+        <!-- API 27+ specific attribute -->
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+</resources>

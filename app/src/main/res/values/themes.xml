@@ -30,7 +30,6 @@
         <item name="android:statusBarColor">@color/primary_green_dark</item>
         <item name="android:navigationBarColor">@color/background_white</item>
         <item name="android:windowLightStatusBar">false</item>
-        <item name="android:windowLightNavigationBar">true</item>
 
         <!-- Text Appearance -->
         <item name="android:textColorPrimary">@color/text_primary</item>
@@ -51,6 +50,10 @@
         <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
         <item name="postSplashScreenTheme">@style/Theme.AI_CROP_DOCTOR</item>
     </style>
+
+    <!-- Base Widget Styles -->
+    <style name="Widget" />
+    <style name="Widget.App" />
 
     <!-- Custom Button Style -->
     <style name="Widget.App.Button" parent="Widget.Material3.Button">
@@ -93,27 +96,23 @@
     </style>
 
     <!-- Confidence Badge Styles -->
-    <style name="Widget.App.Badge.High">
-        <item name="android:background">@color/confidence_high</item>
+    <!-- Base Badge Style -->
+    <style name="Widget.App.Badge">
         <item name="android:textColor">@color/text_white</item>
         <item name="android:padding">8dp</item>
         <item name="android:textSize">14sp</item>
         <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Widget.App.Badge.High">
+        <item name="android:background">@color/confidence_high</item>
     </style>
 
     <style name="Widget.App.Badge.Medium">
         <item name="android:background">@color/confidence_medium</item>
-        <item name="android:textColor">@color/text_white</item>
-        <item name="android:padding">8dp</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
     </style>
 
     <style name="Widget.App.Badge.Low">
         <item name="android:background">@color/confidence_low</item>
-        <item name="android:textColor">@color/text_white</item>
-        <item name="android:padding">8dp</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
     </style>
 </resources>
