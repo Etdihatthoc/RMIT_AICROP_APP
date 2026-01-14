@@ -1,5 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Primary Colors - Agricultural Green -->
+    <color name="primary_green">#4CAF50</color>
+    <color name="primary_green_dark">#388E3C</color>
+    <color name="primary_green_light">#81C784</color>
+
+    <!-- Secondary Colors -->
+    <color name="secondary_brown">#8D6E63</color>
+    <color name="secondary_yellow">#FFC107</color>
+
+    <!-- Accent Colors -->
+    <color name="accent_orange">#FF9800</color>
+    <color name="accent_red">#F44336</color>
+
+    <!-- Background -->
+    <color name="background_white">#FFFFFF</color>
+    <color name="background_light_green">#F1F8E9</color>
+    <color name="background_grey">#F5F5F5</color>
+
+    <!-- Text -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_white">#FFFFFF</color>
+
+    <!-- Confidence Status Colors -->
+    <color name="confidence_high">#4CAF50</color>    <!-- ≥80% -->
+    <color name="confidence_medium">#FF9800</color>  <!-- 50-79% -->
+    <color name="confidence_low">#F44336</color>     <!-- <50% -->
+
+    <!-- Severity Colors -->
+    <color name="severity_low">#81C784</color>
+    <color name="severity_medium">#FFB74D</color>
+    <color name="severity_high">#E57373</color>
+
+    <!-- Basic Colors -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Transparent -->
+    <color name="transparent">#00000000</color>
+
+    <!-- Card and Surface Colors -->
+    <color name="card_background">#FFFFFF</color>
+    <color name="surface">#FAFAFA</color>
+
+    <!-- Border Colors -->
+    <color name="border_light">#E0E0E0</color>
+    <color name="border_medium">#BDBDBD</color>
 </resources>

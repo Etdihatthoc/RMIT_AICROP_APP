@@ -1,3 +1,184 @@
 <resources>
-    <string name="app_name">AI_CROP_DOCTOR</string>
+    <!-- App Name -->
+    <string name="app_name">Bác Sĩ Cây Trồng AI</string>
+
+    <!-- Bottom Navigation -->
+    <string name="nav_home">Trang chủ</string>
+    <string name="nav_history">Lịch sử</string>
+    <string name="nav_map">Bản đồ</string>
+    <string name="nav_profile">Hồ sơ</string>
+
+    <!-- Home Screen -->
+    <string name="home_welcome">Xin chào, Nông dân!</string>
+    <string name="home_subtitle">Chẩn đoán bệnh cây trồng bằng AI</string>
+    <string name="home_description">Chụp ảnh cây trồng để nhận chẩn đoán nhanh chóng và chính xác</string>
+    <string name="home_btn_camera">Chụp ảnh chẩn đoán</string>
+    <string name="home_btn_map">Xem bản đồ dịch bệnh</string>
+    <string name="home_btn_history">Lịch sử chẩn đoán</string>
+    <string name="home_btn_stats">Thống kê</string>
+    <string name="home_recent_diagnoses">Chẩn đoán gần đây</string>
+
+    <!-- Camera Screen -->
+    <string name="camera_title">Chụp ảnh bệnh cây</string>
+    <string name="camera_subtitle">Chụp ảnh rõ ràng phần bị bệnh</string>
+    <string name="camera_capture">Chụp</string>
+    <string name="camera_gallery">Thư viện</string>
+    <string name="camera_flash">Đèn flash</string>
+    <string name="camera_switch">Đổi camera</string>
+    <string name="camera_question_hint">Mô tả triệu chứng hoặc đặt câu hỏi...</string>
+    <string name="camera_question_label">Câu hỏi (tùy chọn)</string>
+    <string name="camera_submit">Gửi chẩn đoán</string>
+    <string name="camera_retake">Chụp lại</string>
+    <string name="camera_location">Vị trí</string>
+    <string name="camera_province">Tỉnh/Thành phố</string>
+    <string name="camera_district">Quận/Huyện</string>
+    <string name="camera_select_province">Chọn tỉnh/thành phố</string>
+    <string name="camera_select_district">Chọn quận/huyện</string>
+
+    <!-- Diagnosis Result Screen -->
+    <string name="result_title">Kết quả chẩn đoán</string>
+    <string name="result_disease">Bệnh phát hiện</string>
+    <string name="result_confidence">Độ tin cậy</string>
+    <string name="result_severity">Mức độ nghiêm trọng</string>
+    <string name="result_severity_high">Nặng</string>
+    <string name="result_severity_medium">Trung bình</string>
+    <string name="result_severity_low">Nhẹ</string>
+    <string name="result_symptoms">Triệu chứng</string>
+    <string name="result_treatments">Cách điều trị</string>
+    <string name="result_prevention">Phòng ngừa</string>
+    <string name="result_full_response">Lý luận AI</string>
+    <string name="result_expert_review">Yêu cầu chuyên gia xem xét</string>
+    <string name="result_expert_reviewed">Đã được chuyên gia xem xét</string>
+    <string name="result_expert_comment">Nhận xét của chuyên gia</string>
+    <string name="result_confidence_low_warning">Độ tin cậy thấp - Cần chuyên gia xem xét</string>
+    <string name="result_btn_new_diagnosis">Chụp ảnh khác</string>
+    <string name="result_btn_share">Chia sẻ</string>
+    <string name="result_location">Vị trí</string>
+    <string name="result_date">Ngày chẩn đoán</string>
+
+    <!-- History Screen -->
+    <string name="history_title">Lịch sử chẩn đoán</string>
+    <string name="history_empty">Chưa có chẩn đoán nào</string>
+    <string name="history_empty_desc">Bắt đầu chụp ảnh để chẩn đoán bệnh cây trồng</string>
+    <string name="history_filter">Lọc</string>
+    <string name="history_sort">Sắp xếp</string>
+    <string name="history_item_date">Ngày: %s</string>
+    <string name="history_item_confidence">Độ tin cậy: %s</string>
+    <string name="history_item_location">Địa điểm: %s</string>
+    <string name="history_refresh">Làm mới</string>
+
+    <!-- Epidemic Map Screen -->
+    <string name="map_title">Bản đồ dịch bệnh</string>
+    <string name="map_subtitle">Xem cảnh báo dịch bệnh gần bạn</string>
+    <string name="map_alert_cases">ca bệnh</string>
+    <string name="map_radius">Trong bán kính %s km</string>
+    <string name="map_filter">Bộ lọc</string>
+    <string name="map_filter_province">Lọc theo tỉnh</string>
+    <string name="map_filter_disease">Lọc theo bệnh</string>
+    <string name="map_filter_date_range">Khoảng thời gian</string>
+    <string name="map_filter_apply">Áp dụng</string>
+    <string name="map_filter_reset">Đặt lại</string>
+    <string name="map_heatmap">Bản đồ nhiệt</string>
+    <string name="map_markers">Điểm đánh dấu</string>
+    <string name="map_legend">Chú thích</string>
+    <string name="map_severity_high">Cao (Đỏ)</string>
+    <string name="map_severity_medium">Trung bình (Cam)</string>
+    <string name="map_severity_low">Thấp (Vàng)</string>
+    <string name="map_no_alerts">Không có cảnh báo dịch bệnh</string>
+    <string name="map_active_alerts">%d cảnh báo đang hoạt động</string>
+
+    <!-- Expert Chat Screen -->
+    <string name="expert_title">Tư vấn chuyên gia</string>
+    <string name="expert_subtitle">Nhận hỗ trợ từ chuyên gia</string>
+    <string name="expert_request">Gửi yêu cầu đến chuyên gia</string>
+    <string name="expert_waiting">Đang chờ chuyên gia xem xét...</string>
+    <string name="expert_reviewed">Đã được xem xét</string>
+    <string name="expert_confirmed">Xác nhận chính xác</string>
+    <string name="expert_corrected">Đã sửa chẩn đoán</string>
+    <string name="expert_rejected">Từ chối - Cần chụp lại</string>
+    <string name="expert_message_hint">Nhập tin nhắn...</string>
+    <string name="expert_send">Gửi</string>
+
+    <!-- Confidence Levels -->
+    <string name="confidence_high">CAO</string>
+    <string name="confidence_medium">TRUNG BÌNH</string>
+    <string name="confidence_low">THẤP</string>
+
+    <!-- Common Actions -->
+    <string name="action_ok">Đồng ý</string>
+    <string name="action_cancel">Hủy</string>
+    <string name="action_yes">Có</string>
+    <string name="action_no">Không</string>
+    <string name="action_close">Đóng</string>
+    <string name="action_retry">Thử lại</string>
+    <string name="action_continue">Tiếp tục</string>
+    <string name="action_back">Quay lại</string>
+    <string name="action_save">Lưu</string>
+    <string name="action_delete">Xóa</string>
+    <string name="action_share">Chia sẻ</string>
+    <string name="action_refresh">Làm mới</string>
+
+    <!-- Loading States -->
+    <string name="loading">Đang tải...</string>
+    <string name="loading_diagnosis">Đang phân tích ảnh...</string>
+    <string name="loading_map">Đang tải bản đồ...</string>
+    <string name="loading_history">Đang tải lịch sử...</string>
+
+    <!-- Error Messages -->
+    <string name="error_generic">Đã xảy ra lỗi</string>
+    <string name="error_network">Lỗi kết nối mạng</string>
+    <string name="error_network_desc">Vui lòng kiểm tra kết nối Internet</string>
+    <string name="error_camera">Không thể mở camera</string>
+    <string name="error_camera_permission">Cần quyền truy cập camera</string>
+    <string name="error_location_permission">Cần quyền truy cập vị trí</string>
+    <string name="error_storage_permission">Cần quyền truy cập bộ nhớ</string>
+    <string name="error_image_upload">Không thể tải ảnh lên</string>
+    <string name="error_image_too_large">Ảnh quá lớn (tối đa 10MB)</string>
+    <string name="error_no_image">Vui lòng chọn ảnh</string>
+    <string name="error_diagnosis_failed">Chẩn đoán thất bại</string>
+    <string name="error_map_load_failed">Không thể tải bản đồ</string>
+
+    <!-- Permissions -->
+    <string name="permission_camera_title">Quyền truy cập camera</string>
+    <string name="permission_camera_desc">Ứng dụng cần quyền truy cập camera để chụp ảnh cây trồng</string>
+    <string name="permission_location_title">Quyền truy cập vị trí</string>
+    <string name="permission_location_desc">Ứng dụng cần quyền truy cập vị trí để xác định khu vực dịch bệnh</string>
+    <string name="permission_storage_title">Quyền truy cập bộ nhớ</string>
+    <string name="permission_storage_desc">Ứng dụng cần quyền truy cập bộ nhớ để lưu ảnh</string>
+    <string name="permission_denied">Quyền bị từ chối</string>
+    <string name="permission_go_to_settings">Đi đến cài đặt</string>
+
+    <!-- Empty States -->
+    <string name="empty_state_title">Không có dữ liệu</string>
+    <string name="empty_state_desc">Chưa có thông tin để hiển thị</string>
+
+    <!-- Dialogs -->
+    <string name="dialog_delete_title">Xóa chẩn đoán?</string>
+    <string name="dialog_delete_message">Bạn có chắc chắn muốn xóa chẩn đoán này?</string>
+    <string name="dialog_request_expert_title">Yêu cầu chuyên gia?</string>
+    <string name="dialog_request_expert_message">Gửi yêu cầu xem xét đến chuyên gia nông nghiệp?</string>
+
+    <!-- Success Messages -->
+    <string name="success_diagnosis_created">Chẩn đoán thành công</string>
+    <string name="success_expert_requested">Đã gửi yêu cầu đến chuyên gia</string>
+    <string name="success_shared">Đã chia sẻ</string>
+
+    <!-- Date Ranges -->
+    <string name="date_range_7_days">7 ngày qua</string>
+    <string name="date_range_30_days">30 ngày qua</string>
+    <string name="date_range_90_days">90 ngày qua</string>
+
+    <!-- Placeholder -->
+    <string name="placeholder_disease_name">Tên bệnh...</string>
+    <string name="placeholder_location">Vị trí...</string>
+    <string name="placeholder_date">Ngày...</string>
+
+    <!-- Content Descriptions (for accessibility) -->
+    <string name="cd_diagnosis_image">Ảnh cây trồng bị bệnh</string>
+    <string name="cd_capture_button">Nút chụp ảnh</string>
+    <string name="cd_gallery_button">Nút chọn ảnh từ thư viện</string>
+    <string name="cd_flash_button">Nút bật/tắt đèn flash</string>
+    <string name="cd_back_button">Nút quay lại</string>
+    <string name="cd_confidence_badge">Huy hiệu độ tin cậy</string>
+    <string name="cd_map_marker">Điểm đánh dấu dịch bệnh</string>
 </resources>
