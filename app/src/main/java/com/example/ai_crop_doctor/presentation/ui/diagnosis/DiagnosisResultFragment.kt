@@ -11,8 +11,8 @@ import androidx.navigation.fragment.findNavController
 import com.example.ai_crop_doctor.R
 import com.example.ai_crop_doctor.databinding.FragmentDiagnosisResultBinding
 import com.example.ai_crop_doctor.domain.model.Diagnosis
-import com.example.ai_crop_doctor.util.Extensions.loadImage
-import com.example.ai_crop_doctor.util.Extensions.toPercentage
+import com.example.ai_crop_doctor.util.loadImage
+import com.example.ai_crop_doctor.util.toPercentage
 import com.bumptech.glide.Glide
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.hilt.android.AndroidEntryPoint

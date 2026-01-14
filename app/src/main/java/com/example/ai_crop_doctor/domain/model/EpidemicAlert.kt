@@ -87,4 +87,18 @@ data class EpidemicAlert(
     fun getCaseCountDisplay(): String {
         return "$caseCount ca nhiễm"
     }
+
+    /**
+     * Get marker title for map
+     */
+    fun getMarkerTitle(): String {
+        return diseaseType
+    }
+
+    /**
+     * Get marker snippet for map
+     */
+    fun getMarkerSnippet(): String {
+        return "$caseCount ca - ${getSeverityDisplay()}"
+    }
 }

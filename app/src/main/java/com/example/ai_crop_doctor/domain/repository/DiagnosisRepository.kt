@@ -19,7 +19,12 @@ interface DiagnosisRepository {
         audioFile: File? = null,
         farmerId: String? = null,
         latitude: Double? = null,
-        longitude: Double? = null
+        longitude: Double? = null,
+        province: String? = null,
+        district: String? = null,
+        temperature: Double? = null,
+        humidity: Double? = null,
+        weatherConditions: String? = null
     ): Resource<Diagnosis>
 
     /**

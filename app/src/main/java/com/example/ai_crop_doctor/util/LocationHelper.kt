@@ -16,12 +16,44 @@ import timber.log.Timber
 import java.util.Locale
 
 /**
+ * Data class to hold location information
+ */
+data class LocationData(
+    val latitude: Double,
+    val longitude: Double,
+    val province: String?,
+    val district: String?
+)
+
+/**
  * Helper class for location operations
  */
 class LocationHelper(private val context: Context) {
 
     private val fusedLocationClient: FusedLocationProviderClient =
         LocationServices.getFusedLocationProviderClient(context)
+
+    companion object {
+        /**
+         * Static method to get current location with province/district
+         */
+        suspend fun getCurrentLocation(context: Context): LocationData? {
+            val helper = LocationHelper(context)
+            val location = helper.getCurrentLocation() ?: return null
+
+            val (province, district) = helper.getProvinceAndDistrict(
+                location.latitude,
+                location.longitude
+            )
+
+            return LocationData(
+                latitude = location.latitude,
+                longitude = location.longitude,
+                province = province,
+                district = district
+            )
+        }
+    }
 
     /**
      * Get current location

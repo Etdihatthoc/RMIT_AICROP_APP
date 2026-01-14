@@ -9,9 +9,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.ai_crop_doctor.R
 import com.example.ai_crop_doctor.databinding.ItemDiagnosisBinding
 import com.example.ai_crop_doctor.domain.model.Diagnosis
-import com.example.ai_crop_doctor.util.Extensions.loadImage
-import com.example.ai_crop_doctor.util.Extensions.toPercentage
-import com.example.ai_crop_doctor.util.Extensions.toRelativeTimeString
+import com.example.ai_crop_doctor.util.loadImage
+import com.example.ai_crop_doctor.util.toPercentage
+import com.example.ai_crop_doctor.util.toRelativeTimeString
 import com.bumptech.glide.Glide
 import java.io.File
 

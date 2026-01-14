@@ -30,12 +30,7 @@ class DiagnosisRepositoryImpl @Inject constructor(
         audioFile: File?,
         farmerId: String?,
         latitude: Double?,
-        longitude: Double?,
-        province: String?,
-        district: String?,
-        temperature: Double?,
-        humidity: Double?,
-        weatherConditions: String?
+        longitude: Double?
     ): Resource<Diagnosis> {
         return try {
             // Prepare image multipart
@@ -50,11 +45,6 @@ class DiagnosisRepositoryImpl @Inject constructor(
             val farmerIdPart = farmerId?.toRequestBody("text/plain".toMediaTypeOrNull())
             val latitudePart = latitude?.toString()?.toRequestBody("text/plain".toMediaTypeOrNull())
             val longitudePart = longitude?.toString()?.toRequestBody("text/plain".toMediaTypeOrNull())
-            val provincePart = province?.toRequestBody("text/plain".toMediaTypeOrNull())
-            val districtPart = district?.toRequestBody("text/plain".toMediaTypeOrNull())
-            val temperaturePart = temperature?.toString()?.toRequestBody("text/plain".toMediaTypeOrNull())
-            val humidityPart = humidity?.toString()?.toRequestBody("text/plain".toMediaTypeOrNull())
-            val weatherConditionsPart = weatherConditions?.toRequestBody("text/plain".toMediaTypeOrNull())
 
             val audioPart = audioFile?.let {
                 MultipartBody.Part.createFormData(
@@ -71,12 +61,7 @@ class DiagnosisRepositoryImpl @Inject constructor(
                 audio = audioPart,
                 farmerId = farmerIdPart,
                 latitude = latitudePart,
-                longitude = longitudePart,
-                province = provincePart,
-                district = districtPart,
-                temperature = temperaturePart,
-                humidity = humidityPart,
-                weatherConditions = weatherConditionsPart
+                longitude = longitudePart
             )
 
             val diagnosis = response.toDomainModel()
